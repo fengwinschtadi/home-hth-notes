@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华体会 · 信息索引页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: #1e2a3a;
+      background: #f4f6f9;
+    }
+
+    /* 深色头图 —— hero 区 */
+    .hero {
+      background: linear-gradient(135deg, #0b1a2e 0%, #1d2f44 100%);
+      color: #e5edf5;
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+      color: #ffffff;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 1.2rem;
+      font-size: 1.1rem;
+      color: #b7cdde;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: #cbddee;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.8rem;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #0b1a2e;
+      border-left: 5px solid #cc7f3a;
+      padding-left: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    /* 卡片组 —— 优势区 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: #1e3a5f;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #3d4e62;
+      line-height: 1.6;
+    }
+
+    /* 说明区 & FAQ 摘要 */
+    .text-block {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.6rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .text-block p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #2c3f55;
+    }
+
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #0b1a2e;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-item span {
+      color: #3a526b;
+      font-size: 0.96rem;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #b15c2a;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(177, 92, 42, 0.3);
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #8a431d;
+      border-bottom-color: #8a431d;
+    }
+
+    /* 底部 */
+    .footer {
+      background: #ffffff;
+      border-top: 1px solid #e2e8f0;
+      padding: 2.2rem 1.5rem;
+      text-align: center;
+      color: #5e6f84;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      border-bottom: none;
+    }
+
+    .footer .dot-sep {
+      margin: 0 0.5rem;
+      opacity: 0.35;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 3.2rem 1.2rem 2.8rem;
+      }
+      .section {
+        padding: 2rem 0;
+      }
+      .card-grid {
+        gap: 1.2rem;
+      }
+      .text-block {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- hero 区 -->
+  <header class="hero">
+    <h1>华体会 · 信息索引</h1>
+    <p>日常查询、对照与延伸阅读的轻简入口。围绕常见需求，整理关键要点，便于快速浏览和参考。</p>
+    <span class="tagline">生活化 · 结构化 · 可延伸</span>
+  </header>
+
+  <div class="container">
+
+    <!-- 优势区（特点卡片） -->
+    <section class="section">
+      <h2 class="section-title">为什么这样组织</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>场景化梳理</h3>
+          <p>从查找、对照、延伸三个日常行为出发，将零散信息归拢为可翻阅的模块，减少重复搜索。</p>
+        </div>
+        <div class="card">
+          <h3>轻量正文区</h3>
+          <p>浅色底、卡片式分割，视觉负担小。重点文字通过字号和间距区分，阅读节奏更自然。</p>
+        </div>
+        <div class="card">
+          <h3>一致链接风格</h3>
+          <p>强调色用于超链接，与正文区分明确。所有链接均以自然语句嵌入，不额外加指引词。</p>
+        </div>
+        <div class="card">
+          <h3>响应式版式</h3>
+          <p>从手机到大屏，网格与内边距自适应。深色头图与浅色内容区形成稳定对比。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 说明区（从日常查询、对照与延伸阅读角度） -->
+    <section class="section">
+      <h2 class="section-title">查询 · 对照 · 延伸</h2>
+      <div class="text-block">
+        <p>日常查阅时，经常需要快速定位某个概念的轮廓、常见问法或相关线索。这份介绍页尝试将零散信息以“先总览、后分类”的方式呈现，方便你在浏览过程中随时对照和跳转。例如，当你看到某个术语或缩写时，可以在相邻段落中找到解释或关联内容，不必切换到多个标签页。</p>
+        <p>延伸阅读的价值在于建立连接。页面中每个模块都留有余地——你可以在 <a href="https://home--hth.com">华体会</a> 的索引基础上继续深入，查看更细分的主题或更新记录。延伸不一定意味着长篇，有时一段简短的 FAQ 摘要就能帮助建立整体感。</p>
+        <p>这种组织方式也便于你按需调整：把需要的段落作为笔记片断，或把 FAQ 条目当作快速参考。内容真实克制，不夸大、不诱导，只提供可查阅的框架。</p>
+      </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section class="section">
+      <h2 class="section-title">常见疑问摘要</h2>
+      <div class="text-block">
+        <div class="faq-item">
+          <strong>这个页面主要提供什么？</strong>
+          <span>一个轻量的信息汇集页，围绕“华体会”相关的内容组织成卡片、说明和 FAQ 摘要，便于日常查询和对照。不包含承诺或引导。</span>
+        </div>
+        <div class="faq-item">
+          <strong>链接会跳转到哪里？</strong>
+          <span>页面内出现的链接指向 <a href="https://home--hth.com">华体会</a> 首页，适合作为延伸阅读的起点。链接文本直接使用名称，没有额外指示。</span>
+        </div>
+        <div class="faq-item">
+          <strong>内容是否保持更新？</strong>
+          <span>本页为静态展示，反映当前的组织思路。实际更新频率取决于来源信息的变动，建议定期核对或自行补充笔记。</span>
+        </div>
+        <div class="faq-item">
+          <strong>为什么使用深色头图 + 浅色正文？</strong>
+          <span>视觉上区分“介绍/标识区”与“内容区”，深色区域建立页面身份，浅色区域利于长时间阅读。强调色用于链接，保持统一。</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 底部链接 -->
+  <footer class="footer">
+    <span>信息索引 · 日常查询与延伸</span>
+    <span class="dot-sep">·</span>
+    <a href="https://home--hth.com">华体会</a>
+    <span class="dot-sep">·</span>
+    <span>内容仅供参考</span>
+  </footer>
+
+</body>
+</html>
